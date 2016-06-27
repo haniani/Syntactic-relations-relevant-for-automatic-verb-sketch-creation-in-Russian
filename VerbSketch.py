@@ -92,9 +92,13 @@ def getSketch(word):
                         break
 
                       logar = (math.log2(float(relfreq)*float(209198275)/float(ipm1)*float(ipm2))) #PMI1
-                      logar2 = (math.log2(float(relfreq)**3*float(209198275)/float(ipm1)*float(ipm2))) #PMI2
+                      logar2 = (math.log2(float(relfreq)**3*float(209198275)/float(ipm1)*float(ipm2)))
+                      if logar2 <= 30:
+                        break #PMI2
                       sqrt_relfreq = sqrt(float(relfreq))
                       tscore = ((float(relfreq) + (((float(ipm1))*(float(ipm2))) / (float(209198275))))) / (sqrt_relfreq)
+                      if tscore <= 1.1:
+                        break
                       resglag.write(str(logar) + "\t" + str(tscore) + "\t" + str(rel) + "\t" + str(znachdic) + "\n")
                       resglag2.write(str(logar2) + "\t" + str(tscore) + "\t" + str(rel) + "\t" + str(znachdic) + "\n")
 
