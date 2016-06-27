@@ -8,3 +8,4 @@ freqdict.json - частотный словарь русского языка О
 trigrams_sample.py - небольшой сет для подсчета синтаксических отношений  
 Файлы csv - применение различных метрик сочетаемости
 txt - портрет слова
+slovnikBigra.py - https://yadi.sk/d/MKBfXNjFsoyWK 
